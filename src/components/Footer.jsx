@@ -6,9 +6,9 @@ function Footer() {
       <h1 className='text-xl font-bold text-[color:var(--primary-green)] hover:cursor-pointer'>E<span className='text-white'>commerc</span>E</h1>
       
       <div className="flex space-x-4">
-        <BsFacebook size={28} className="hover:cursor-pointer"/>
-        <BsTwitter size={28} className="hover:cursor-pointer" />
-        <BsInstagram size={28} className="hover:cursor-pointer" />
+        <BsFacebook size={28} className="hover:cursor-pointer hover:animate-bounce"/>
+        <BsTwitter size={28} className="hover:cursor-pointer hover:animate-bounce" />
+        <BsInstagram size={28} className="hover:cursor-pointer hover:animate-bounce" />
       </div>
     </div>
   )

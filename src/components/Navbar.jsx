@@ -27,9 +27,9 @@ function Navbar() {
           <li onClick={handleNav} className='p-4 hover:cursor-pointer hover:scale-105 border-b border-b-gray-400'>Store</li>
           <li onClick={handleNav} className='p-4 hover:cursor-pointer hover:scale-105 border-b border-b-gray-400'>Login</li>          
           <div className='mt-8 w-full px-8 flex justify-between'>
-            <BsFacebook size={30} className='hover:cursor-pointer hover:animate-bounce' />
-            <BsTwitter size={28} className='hover:cursor-pointer hover:animate-bounce' />
-            <BsInstagram size={28} className='hover:cursor-pointer hover:animate-bounce' />
+            <BsFacebook size={30} className='hover:cursor-pointer' />
+            <BsTwitter size={28} className='hover:cursor-pointer' />
+            <BsInstagram size={28} className='hover:cursor-pointer' />
           </div>
         </ul>
       </div>
