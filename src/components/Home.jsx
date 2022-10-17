@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import Slider from "react-slick";
+import DestacadosItem from './DestacadosItem';
 
 function Home() {
 
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  const loadData = async () => {
+    setLoading(true);
+    let response = await fetch('http://localhost:8080/api/productos/');
+    let obj = await response.json(); 
+    setData(obj.result)
+    setLoading(false);
+  }
   const settings = {
     dots: true,
     infinite: false,
@@ -41,15 +49,7 @@ function Home() {
     ]
   };
 
-  useEffect( () => {
-    const loadData = async () => {
-      setLoading(true);
-      let response = await fetch('http://localhost:8080/api/productos/');
-      let obj = await response.json(); 
-      setData(obj.result)
-      setLoading(false);
-    }
-
+  useEffect( () => {    
     loadData();
   },[])
 
@@ -61,13 +61,7 @@ function Home() {
         <Slider {...settings} className="w-[95%] mx-auto px-2 md:px-0">
           {data.map( item => {
             return (              
-              <div className="text-white w-full h-[250px] relative hover:cursor-pointer hover:scale-105">
-                <img className="absolute top-0 left-0 w-[95%] h-full object-cover rounded-xl" src={item.imageUrl} alt={item.title} />
-                <div className="px-2 py-1 bg-black rounded-md absolute bottom-3 left-2 w-[90%] mx-auto text-[color:var(--primary-green)] flex justify-between items-center">
-                  <h2 className="text-lg md:text-xl font-bold">{item.title}</h2>
-                  <p className="text-lg md:text-xl font-bold">${item.price}</p> 
-                </div>
-              </div>
+              <DestacadosItem item={item} />
             );
           })}
         </Slider>
