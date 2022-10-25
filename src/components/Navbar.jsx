@@ -21,7 +21,7 @@ function Navbar() {
         {nav ? <CgClose size={28} /> : <HiMenuAlt3 size={28} />}
       </div>
 
-      <div className={nav ? 'md:hidden fixed top-0 left-0 w-[60%] border-r border-r-gray-900 h-full bg-[#000300] ease-in duration-300' : 'md:hidden fixed top-0 left-[-100%] w-[60%] border-r border-r-gray-900 h-full bg-[#000300] ease-in duration-300'}>        
+      <div className={nav ? 'z-10 md:hidden fixed top-0 left-0 w-[60%] border-r border-r-gray-900 h-full bg-[#000300] ease-in duration-300' : 'md:hidden fixed top-0 left-[-100%] w-[60%] border-r border-r-gray-900 h-full bg-[#000300] ease-in duration-300'}>        
         <ul className='pt-24 uppercase font-bold px-4'>
           <li onClick={handleNav} className='p-4 hover:cursor-pointer hover:scale-105 border-b border-b-gray-400'>Home</li>
           <li onClick={handleNav} className='p-4 hover:cursor-pointer hover:scale-105 border-b border-b-gray-400'>Store</li>
