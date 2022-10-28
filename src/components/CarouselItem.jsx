@@ -1,6 +1,6 @@
 import React from 'react'
 
-function DestacadosItem({item}) {
+function CarouselItem({item}) {
   return (
     <div className="text-white w-full h-[250px] relative hover:cursor-pointer rounded-lg overflow-hidden">
       <img className="absolute top-0 left-0 w-[95%] h-full object-contain " src={item.foto} alt={item.nombre} />
@@ -12,4 +12,4 @@ function DestacadosItem({item}) {
   )
 }
 
-export default DestacadosItem
+export default CarouselItem

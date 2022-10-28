@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import {HiMenuAlt3 } from 'react-icons/hi'
 import { CgClose } from 'react-icons/cg'
 import { BsFacebook, BsTwitter, BsInstagram } from 'react-icons/bs'
+import { IoSettingsOutline } from 'react-icons/io5';
 
 function Navbar() {
 
@@ -15,6 +16,7 @@ function Navbar() {
         <li className='hover:cursor-pointer hover:scale-110'>Home</li>        
         <li className='hover:cursor-pointer hover:scale-110'>Store</li>
         <li className='hover:cursor-pointer hover:scale-110'>Login</li>
+        <li><IoSettingsOutline size={24} /> </li>
       </ul>
 
       <div onClick={handleNav} className='md:hidden'>
