@@ -18,7 +18,7 @@ function Navbar() {
         <Link to={'/' } className='hover:cursor-pointer hover:scale-110'>Home</Link>        
         <Link to={'/store' } className='hover:cursor-pointer hover:scale-110'>Store</Link>
         <li className='hover:cursor-pointer hover:scale-110'>Login</li>
-        <li><IoSettingsOutline size={24} /> </li>
+        <Link to='/admin'><IoSettingsOutline size={24} /> </Link>
       </ul>
 
       <div onClick={handleNav} className='md:hidden'>

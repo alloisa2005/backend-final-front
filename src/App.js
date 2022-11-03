@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Footer from "./components/Footer";
 import Home from "./screens/Home";
 import Store from "./screens/Store";
+import Admin from "./screens/Admin";
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
         <Routes>
           <Route path="/" element={ <Home />} exact></Route> 
           <Route path="/store" element={ <Store />} exact></Route>
+          <Route path="/admin" element={ <Admin />} exact></Route>
+
           <Route path="*" element={ <Home />} exact></Route> 
         </Routes>      
       <Footer />
